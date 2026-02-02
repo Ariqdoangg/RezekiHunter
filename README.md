@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🍎 Rezeki Hunter
+#  Rezeki Hunter
 
 **Campus Food Rescue Ecosystem**
 
