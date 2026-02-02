@@ -1,59 +1,202 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+# 🍎 Rezeki Hunter
+
+**Campus Food Rescue Ecosystem**
+
+<p>
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
+  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
 </p>
 
-## About Laravel
+A **3-tier ecosystem** connecting UPSI students with surplus food in real-time to minimize campus food waste.  
+Mobile App (Student) · Admin Dashboard · RESTful API — all in one repo.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+[Getting Started](#-getting-started) · [Features](#-key-features) · [Tech Stack](#%EF%B8%8F-tech-stack) · [Screenshots](#-screenshots)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📸 Screenshots
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+<div align="center">
+<table>
+  <tr>
+    <td align="center" colspan="2"><h3>📱 Mobile App (Flutter)</h3></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Live Feed</b></td>
+    <td align="center"><b>Login</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/mobile_feed.png" width="400" /></td>
+    <td><img src="screenshots/mobile_login.png" width="400" /></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><b>Profile & Stats</b></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><img src="screenshots/mobile_profile.png" width="400" /></td>
+  </tr>
+</table>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<table>
+  <tr>
+    <td align="center"><h3>💻 Admin Dashboard (React)</h3></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/admin_dashboard.png" width="700" /></td>
+  </tr>
+</table>
+</div>
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🛠️ Tech Stack
 
-### Premium Partners
+| Layer | Technology | Role |
+| :--- | :--- | :--- |
+| **Mobile App** | Flutter (Dart) | Cross-platform app for students to post & claim food |
+| **Admin Panel** | React.js + Vite + Tailwind CSS | Web dashboard for monitoring & moderation |
+| **Backend API** | Laravel 11 + Sanctum | RESTful API with token-based authentication |
+| **Database** | MySQL | Relational database for users, foods & claims |
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Architecture
 
-## Contributing
+```
+┌─────────────────┐     ┌──────────────────┐
+│  Flutter App     │────▶│                  │
+│  (Student)       │     │  Laravel API     │──── MySQL
+│                  │◀────│  (Sanctum Auth)  │
+└─────────────────┘     │                  │
+                         │                  │
+┌─────────────────┐     │                  │
+│  React Dashboard │────▶│                  │
+│  (Admin)         │◀────│                  │
+└─────────────────┘     └──────────────────┘
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## ✨ Key Features
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 📱 Mobile App (Student)
+- **Live Food Feed** — Real-time list with status badges (Available / Claimed / Expired)
+- **Filter & Search** — Filter by status with chip selector
+- **One-Tap Claim** — Claim available food instantly with confirmation
+- **Share Food** — Upload photo, add description, tag campus location
+- **Profile Dashboard** — Track personal stats (Posted / Claimed / Active)
+- **Auto-Login** — Secure token storage for seamless sessions
 
-## Security Vulnerabilities
+### 💻 Admin Dashboard
+- **Live Analytics** — Stats cards with auto-refresh every 5 seconds
+- **Impact Rate** — SVG donut chart showing food rescued vs wasted
+- **Hotspot Map** — Campus locations ranked by food activity
+- **Recent Claims** — Real-time feed of latest claim activity
+- **Food Management** — Full CRUD with status filters & search
+- **Glassmorphism UI** — Modern design with Tailwind CSS
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 🔧 Backend API
+- **RESTful Endpoints** — Clean API for both mobile & web clients
+- **Laravel Sanctum** — Token-based auth with role control (Admin vs Student)
+- **Image Upload** — Multipart form data handling with storage
+- **Statistics Engine** — Aggregated stats for dashboard analytics
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🚀 Getting Started
+
+### Prerequisites
+
+- PHP 8.2+ & Composer
+- Node.js 18+ & NPM
+- Flutter SDK 3.x
+- MySQL Server
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/Ariqdoangg/RezekiHunter.git
+cd RezekiHunter
+```
+
+### 2. Backend Setup (Laravel)
+
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+```
+
+Configure `.env` with your MySQL credentials, then:
+
+```bash
+php artisan migrate --seed
+php artisan serve --host=0.0.0.0
+```
+
+### 3. Admin Dashboard (React)
+
+```bash
+cd admin-panel
+npm install
+npm run dev
+```
+
+Open `http://localhost:5173` — Login: `admin@rezeki.com` / `password`
+
+### 4. Mobile App (Flutter)
+
+```bash
+cd rezeki_hunter_app
+flutter pub get
+flutter run
+```
+
+Login: `ariq@student.com` / `password`
+
+---
+
+## 📁 Project Structure
+
+```
+RezekiHunter/
+├── app/                    # Laravel Controllers, Models, Middleware
+├── database/
+│   ├── migrations/         # Database schema
+│   └── seeders/            # Test data (4 users, 4 food posts)
+├── routes/
+│   └── api.php             # API endpoints
+├── admin-panel/            # React + Vite + Tailwind
+│   ├── src/
+│   │   ├── components/     # Dashboard, FoodList, Sidebar
+│   │   └── services/       # API service layer
+│   └── package.json
+├── rezeki_hunter_app/      # Flutter mobile app
+│   └── lib/
+│       ├── config/         # API URLs, colors, constants
+│       ├── models/         # Food model
+│       ├── services/       # Auth & API services
+│       ├── screens/        # Splash, Login, Home, Post, Profile
+│       └── widgets/        # FoodCard, FoodDetailSheet
+└── README.md
+```
+
+---
+
+## 👨‍💻 Author
+
+**Ariq Haikal** — Final-year Software Engineering Student @ UPSI
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/ariqhaikal)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Ariqdoangg)
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ for UPSI campus community</sub>
+</div>
